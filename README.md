@@ -16,4 +16,4 @@ Alternatively, you can run:
 cargo build
 ```
 
-And then use the 'rust-pswd-manager' executable file inside "./target/build/" folder
+And then use the 'rust-pswd-manager' executable file inside "./target/debug/" folder
