@@ -217,6 +217,7 @@ impl Manager {
         self.selected_acc_index = None;
         self.selected_coll_index = None;
         self.salt.zeroize();
+        self.password.zeroize();
         self.show_password = false;
         Ok(())
     }
