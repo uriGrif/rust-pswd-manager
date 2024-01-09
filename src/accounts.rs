@@ -169,6 +169,9 @@ pub fn save_accounts(
         ::encrypt(serialized.as_bytes(), password.as_bytes(), salt)
         .unwrap();
 
+    let path: std::path::PathBuf = std::path::PathBuf::from(file_path);
+    let dir: &std::path::Path = path.parent().unwrap();
+    fs::create_dir_all(dir)?;
     _ = fs::write(file_path, encrypted)?;
     Ok(())
 }
